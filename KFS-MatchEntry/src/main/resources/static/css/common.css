@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	/* 横中央 */
+	align-items: center;    	/* 縦中央 */
+	
+	background-color: bisque;
+}
+
+h1{
+	margin-bottom: 20px;
+}
+
+/* 白い四角の箱 */
+.app-container {
+  background-color: #ffffff;
+  padding: 50px 0px;
+  width: 600px;          /* 任意 */
+  border-radius: 8px;    /* 角丸（任意） */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 影（任意） */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;	/* 横中央 */
+  align-items: center;    	/* 縦中央 */
+}
+
+.button-area{
+	display: flex;
+	gap: 16px;               /*	ボタン間の余白 */
+	margin-top: 24px;
+}
+
+.button-area button {
+  min-width: 180px;
+  padding: 8px 16px;
+}
+
+#common-button{
+	color:white;
+}
+
+.participate-area, .choose-class-area{
+	margin-bottom: 20px;
+}
