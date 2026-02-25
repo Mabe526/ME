@@ -13,7 +13,7 @@
 		<h1>スクール生情報入力画面</h1>
 
 		<form id="entry-form" th:action="@{/ent002}" method="get" th:object="${entryForm}">
-			<label>名前：</label>
+			<label>名前（姓）：</label>
 			<br>
 			<input type="text" class="form-control" id="full-name" th:field="*{fullName}" placeholder="川崎 ふろん太">
 			<div class="text-danger" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}">
