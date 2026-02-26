@@ -21,7 +21,6 @@
 					<div class="text-danger" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">
 					</div>
 				</div>
-				<!-- 新規追加 -->
 				<div class="col-md-6">
 					<label>名前（名）：</label>
 					<input type="text" class="form-control" id="full-name" th:field="*{firstName}" placeholder="ふろん太">
@@ -38,7 +37,6 @@
 					<div class="text-danger" th:if="${#fields.hasErrors('kanaLastName')}" th:errors="*{kanaLastName}">
 					</div>
 				</div>
-				<!-- 新規追加 -->
 				<div class="col-md-6">
 					<label>フリガナ（めい）：</label>
 					<input type="text" class="form-control" id="kana-name" th:field="*{kanaFirstName}"

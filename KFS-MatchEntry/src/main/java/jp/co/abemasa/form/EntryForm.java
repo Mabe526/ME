@@ -9,12 +9,6 @@ import lombok.Data;
 @Data
 public class EntryForm {
 
-	//	@NotBlank(message = "⚠名前は必須です")
-	//	private String fullName;
-
-	//	@NotBlank(message = "⚠フリガナは必須です")
-	//	private String kanaName;
-
 	// 漢字姓
 	@NotBlank(message = "⚠必須項目です")
 	private String lastName;
@@ -23,17 +17,19 @@ public class EntryForm {
 	@NotBlank(message = "⚠必須項目です")
 	private String firstName;
 
-	// 漢字姓
+	// ふりがな姓
 	@NotBlank(message = "⚠必須項目です")
 	private String kanaLastName;
 
-	// 漢字姓
+	// ふりがな名
 	@NotBlank(message = "⚠必須項目です")
 	private String kanaFirstName;
 
+	// 学年
 	@NotBlank(message = "⚠必須項目です")
 	private String grade;
 
+	// 会場
 	@NotEmpty(message = "⚠クラスを1つ以上選択してください")
 	private String[] venue;
 }
