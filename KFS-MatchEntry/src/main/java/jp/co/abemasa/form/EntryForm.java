@@ -5,19 +5,31 @@ import jakarta.validation.constraints.NotEmpty;
 
 import lombok.Data;
 
-// formから受け取る情報を保持する
+// 画面1から受け取る情報を保持する
 @Data
 public class EntryForm {
-	
-	@NotBlank(message = "⚠名前は必須です")
-	private String fullName;
-	
-	@NotBlank(message = "⚠フリガナは必須です")
-	private String kanaName;
-	
-	@NotBlank(message = "⚠学年は必須です")
+
+	// 漢字姓
+	@NotBlank(message = "⚠必須項目です")
+	private String lastName;
+
+	// 漢字名
+	@NotBlank(message = "⚠必須項目です")
+	private String firstName;
+
+	// ふりがな姓
+	@NotBlank(message = "⚠必須項目です")
+	private String kanaLastName;
+
+	// ふりがな名
+	@NotBlank(message = "⚠必須項目です")
+	private String kanaFirstName;
+
+	// 学年
+	@NotBlank(message = "⚠必須項目です")
 	private String grade;
-	
+
+	// 会場
 	@NotEmpty(message = "⚠クラスを1つ以上選択してください")
 	private String[] venue;
 }

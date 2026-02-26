@@ -13,44 +13,67 @@
 		<h1>スクール生情報入力画面</h1>
 
 		<form id="entry-form" th:action="@{/ent002}" method="get" th:object="${entryForm}">
-			<label>名前：</label>
-			<br>
-			<input type="text" class="form-control" id="full-name" th:field="*{fullName}" placeholder="川崎 ふろん太">
-			<div class="text-danger" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}">
+			<div class="row">
+				<div class="col-md-6">
+					<label>名前（姓）：</label>
+					<br>
+					<input type="text" class="form-control" id="full-name" th:field="*{lastName}" placeholder="川崎">
+					<div class="text-danger" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<label>名前（名）：</label>
+					<input type="text" class="form-control" id="full-name" th:field="*{firstName}" placeholder="ふろん太">
+					<div class="text-danger" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">
+					</div>
+				</div>
 			</div>
-			<br>
-			<label>フリガナ：</label>
-			<br>
-			<input type="text" class="form-control" id="kana-name" th:field="*{kanaName}" placeholder="カワサキ フロンタ">
-			<div class="text-danger" th:if="${#fields.hasErrors('kanaName')}" th:errors="*{kanaName}">
+
+			<div class="row">
+				<div class="col-md-6">
+					<label>フリガナ（せい）：</label>
+					<input type="text" class="form-control" id="kana-name" th:field="*{kanaLastName}"
+						placeholder="カワサキ">
+					<div class="text-danger" th:if="${#fields.hasErrors('kanaLastName')}" th:errors="*{kanaLastName}">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<label>フリガナ（めい）：</label>
+					<input type="text" class="form-control" id="kana-name" th:field="*{kanaFirstName}"
+						placeholder="フロンタ">
+					<div class="text-danger" th:if="${#fields.hasErrors('kanaFirstName')}" th:errors="*{kanaFirstName}">
+					</div>
+				</div>
 			</div>
-			<br>
-			<label>学年</label>
-			<br>
-			<select class="select-grade form-select" th:field="*{grade}">
-				<option value="">学年を選択</option>
-				<option value="年中">年中</option>
-				<option value="年長">年長</option>
-				<option value="1年生">1年生</option>
-				<option value="2年生">2年生</option>
-				<option value="3年生">3年生</option>
-				<option value="4年生">4年生</option>
-				<option value="5年生">5年生</option>
-				<option value="6年生">6年生</option>
-			</select>
-			<!-- エラーメッセージ-->
-			<div class="text-danger" th:if="${#fields.hasErrors('grade')}" th:errors="*{grade}">
+
+			<div class="select-grade row">
+				<label>学年</label>
+				<select class="select-grade form-select" th:field="*{grade}">
+					<option value="">学年を選択</option>
+					<option value="年中">年中</option>
+					<option value="年長">年長</option>
+					<option value="1年生">1年生</option>
+					<option value="2年生">2年生</option>
+					<option value="3年生">3年生</option>
+					<option value="4年生">4年生</option>
+					<option value="5年生">5年生</option>
+					<option value="6年生">6年生</option>
+				</select>
+				<!-- エラーメッセージ-->
+				<div class="text-danger" th:if="${#fields.hasErrors('grade')}" th:errors="*{grade}">
+				</div>
 			</div>
-			<br>
-			<label>会場</label>
-			<br>
-			<input type="checkbox" class="form-check-input" id="venue01" th:field="*{venue}" value="麻生">麻生<br>
-			<input type="checkbox" class="form-check-input" id="venue02" th:field="*{venue}" value="生田">生田<br>
-			<input type="checkbox" class="form-check-input" id="venue03" th:field="*{venue}" value="鷺沼">鷺沼<br>
-			<input type="checkbox" class="form-check-input" id="venue04" th:field="*{venue}" value="溝口">溝口<br>
-			<input type="checkbox" class="form-check-input" id="venue05" th:field="*{venue}" value="中原">中原<br>
-			<input type="checkbox" class="form-check-input" id="venue06" th:field="*{venue}" value="川崎">川崎<br>
-			<div class="text-danger" th:if="${#fields.hasErrors('venue')}" th:errors="*{venue}">
+
+			<div class="column">
+				<label>会場</label><br>
+				<input type="checkbox" class="form-check-input" id="venue01" th:field="*{venue}" value="麻生">麻生<br>
+				<input type="checkbox" class="form-check-input" id="venue02" th:field="*{venue}" value="生田">生田<br>
+				<input type="checkbox" class="form-check-input" id="venue03" th:field="*{venue}" value="鷺沼">鷺沼<br>
+				<input type="checkbox" class="form-check-input" id="venue04" th:field="*{venue}" value="溝口">溝口<br>
+				<input type="checkbox" class="form-check-input" id="venue05" th:field="*{venue}" value="中原">中原<br>
+				<input type="checkbox" class="form-check-input" id="venue06" th:field="*{venue}" value="川崎">川崎<br>
+				<div class="text-danger" th:if="${#fields.hasErrors('venue')}" th:errors="*{venue}">
+				</div>
 			</div>
 		</form>
 
