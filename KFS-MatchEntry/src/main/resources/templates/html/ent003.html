@@ -13,8 +13,8 @@
 		<h1>入力情報確認画面</h1>
 
 		<div class="confirmation-area">
-			<p>名前：<span th:text="${entryForm.fullName}"></span></p>
-			<p>フリガナ：<span th:text="${entryForm.kanaName}"></span></p>
+			<p>名前：<span th:text="${entryForm.lastName + ' ' + entryForm.firstName}"></span></p>
+			<p>ふりがな：<span th:text="${entryForm.kanaLastName + ' ' + entryForm.kanaFirstName}"></span></p>
 			<p>学年：<span th:text="${entryForm.grade}"></span></p>
 			<p>会場：<span th:text="${#strings.arrayJoin(entryForm.venue, '・')}"></span></p>
 			<p>参加意思：<span th:text="${participateForm.participate}"></span></p>

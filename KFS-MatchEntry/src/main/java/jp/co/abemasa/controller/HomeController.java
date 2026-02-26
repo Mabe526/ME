@@ -147,8 +147,8 @@ public class HomeController {
 			for (String venue : venues) {
 
 				TEntryEntity entity = new TEntryEntity();
-				entity.setFullName(entryForm.getFullName());
-				entity.setKanaName(entryForm.getKanaName());
+				entity.setFullName(entryForm.getLastName() + " " + entryForm.getFirstName());
+				entity.setKanaName(entryForm.getKanaLastName() + " " + entryForm.getKanaFirstName());
 				entity.setGrade(entryForm.getGrade());
 				entity.setVenue(venue);
 				entity.setParticipate(participateForm.getParticipate());
@@ -163,8 +163,8 @@ public class HomeController {
 				for (String chooseClass : participatingClass) {
 
 					TEntryEntity entity = new TEntryEntity();
-					entity.setFullName(entryForm.getFullName());
-					entity.setKanaName(entryForm.getKanaName());
+					entity.setFullName(entryForm.getLastName() + " " + entryForm.getFirstName());
+					entity.setKanaName(entryForm.getKanaLastName() + " " + entryForm.getKanaFirstName());
 					entity.setGrade(entryForm.getGrade());
 					entity.setVenue(venue);
 					// debag
